@@ -11,9 +11,9 @@ class Handler(BaseHTTPRequestHandler):
         </head>
 
         <body>
-            <h1>Hello from Docker!</h1>
+            <h1>Hello from Deepak Sagar!</h1>
 
-            <h2>GitHub Actions Docker Build</h2>
+            <h2>GitHub Actions Docker Build fully automated</h2>
 
             <p>
                 This application was built using
