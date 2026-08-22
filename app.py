@@ -423,7 +423,7 @@ class Handler(BaseHTTPRequestHandler):
 <nav>
 
     <div class="logo">
-        Deepak<span>Sagar</span>
+        Deepak<span>Sagar...</span>
     </div>
 
     <ul>
