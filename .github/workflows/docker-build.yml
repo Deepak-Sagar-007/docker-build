@@ -1,4 +1,4 @@
-name: Docker Build Pipeline
+name: Docker CI/CD Pipeline
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  docker-build:
+  docker-build-push:
 
     runs-on: ubuntu-latest
 
@@ -18,8 +18,14 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: docker build -t github-actions-demo:latest .
+      - name: Login to Docker Hub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: List Docker images
-        run: docker images
+      - name: Build Docker image
+        run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/github-actions-demo:latest .
+
+      - name: Push Docker image to Docker Hub
+        run: docker push ${{ vars.DOCKERHUB_USERNAME }}/github-actions-demo:latest
