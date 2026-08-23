@@ -460,7 +460,7 @@ class Handler(BaseHTTPRequestHandler):
         </div>
 
         <h1>
-            Build. Run.
+            Build. Ship.
             <span>Deploy.</span>
         </h1>
 
