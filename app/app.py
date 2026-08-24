@@ -25,7 +25,7 @@ def home():
 
         <p>Redis container communication is working.</p>
 
-        <h3>Visitor Count: {visits}</h3>
+        <h3>Visitor Count From redis: {visits}</h3>
     </body>
     </html>
     """
