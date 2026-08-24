@@ -21,7 +21,7 @@ def home():
 
         <h2>Flask Application</h2>
 
-        <p>Application is running successfully.</p>
+        <p>Application is running successfully......</p>
 
         <p>Redis container communication is working.</p>
 
